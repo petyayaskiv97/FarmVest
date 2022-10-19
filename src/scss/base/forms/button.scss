@@ -1,0 +1,50 @@
+//<BUTTONS (a.btn+tab)>
+// Снипет (HTML): btn
+
+.button {
+	font-family: 'Lato';
+	text-align: center;
+	font-weight: 500;
+	display: inline-block;
+	line-height: math.div(22, 18);
+	padding: rem(21) rem(25);
+	transition: all 0.3s ease 0s;
+	background-color: #23B123;
+	border-radius: rem(10);
+
+	@media(min-width: $tablet) {
+		min-width: rem(142);
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: #1b8b1b;
+		}
+	}
+
+	&_border {
+		background-color: transparent;
+		border: 1px solid #fff;
+		padding: rem(21) rem(25);
+
+		@media (any-hover: hover) {
+			&:hover {
+				border: 1px solid $greenColor;
+				color: $greenColor;
+				background-color: transparent;
+			}
+		}
+	}
+
+	&._fw {
+		width: 100%;
+	}
+
+	@media(max-width: $tablet) {
+		padding: rem(15) rem(20);
+
+		&_border {
+			padding: rem(15) rem(20);
+		}
+	}
+}
